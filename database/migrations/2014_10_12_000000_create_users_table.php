@@ -19,7 +19,6 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique(); //varchar 255 unico
             $table->timestamp('email_verified_at')->nullable(); //columna timestamp activa verificacion de correos (pone la fecha de verificacion) nullable
             $table->string('password'); //varchar 255
-            $table->string('avatar');
             $table->rememberToken(); //varchar 100 (se almacena el token de sesion)
             $table->timestamps(); //created-at updated-at
         });
