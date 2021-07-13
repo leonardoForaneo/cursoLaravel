@@ -21,8 +21,18 @@ Route::get('cursos', [CursoController::class, 'index'])->name('cursos.index');
 
 Route::get('cursos/create', [CursoController::class, 'create'])->name('cursos.create');
 
+//Ruta que recibe informacion desde el formulario
+Route::post('cursos', [CursoController::class, 'store'])->name('cursos.store');
+
 //Recibiendo variables
-Route::get('cursos/{id}', [CursoController::class, 'show'])->name('cursos.show');
+Route::get('cursos/{curso}', [CursoController::class, 'show'])->name('cursos.show');
+
+//Route editar
+Route::get('cursos/{curso}/edit', [CursoController::class, 'edit'])->name('cursos.edit');
+
+//Ruta para editar en la base de datos
+Route::put('cursos/{curso}', [CursoController::class, 'update'])->name('cursos.update');
+
 
 //Recibiendo más de una variable
 /*Route::get('cursos/{curso}/{categoria?}', function ($curso, $categoria = null) {
