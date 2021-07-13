@@ -24,7 +24,18 @@ class StoreCurso extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required',
+            'description' => 'required',
+            'category' => 'required'
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'name' => 'nombre del curso',
+            'description' => 'descripcion del curso',
+            'category' => 'categoria del curso'
         ];
     }
 }
