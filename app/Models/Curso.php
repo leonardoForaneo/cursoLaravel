@@ -9,6 +9,9 @@ class Curso extends Model
 {
     use HasFactory;
 
+    //protected $fillable = ['name', 'description', 'category'];
+    protected $guarded = [];
+
     //Asignamos el modelo a una tabla sin utilizar la convencion
     //protected $table = "users";
 }
