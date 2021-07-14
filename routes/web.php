@@ -33,6 +33,9 @@ Route::get('cursos/{curso}/edit', [CursoController::class, 'edit'])->name('curso
 //Ruta para editar en la base de datos
 Route::put('cursos/{curso}', [CursoController::class, 'update'])->name('cursos.update');
 
+//Ruta encargada de eliminar un registro (No va a mostrar informacion sino a procesarla)
+Route::delete('cursos/{curso}', [CursoController::class, 'destroy'])->name('cursos.destroy');
+
 
 //Recibiendo más de una variable
 /*Route::get('cursos/{curso}/{categoria?}', function ($curso, $categoria = null) {
