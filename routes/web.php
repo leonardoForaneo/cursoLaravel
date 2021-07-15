@@ -15,8 +15,8 @@ use App\Http\Controllers\CursoController;
 |
 */
 
-Route::get('/', HomeController::class);
-
+Route::get('/', HomeController::class)->name('home');
+/*
 Route::get('cursos', [CursoController::class, 'index'])->name('cursos.index');
 
 Route::get('cursos/create', [CursoController::class, 'create'])->name('cursos.create');
@@ -34,7 +34,17 @@ Route::get('cursos/{curso}/edit', [CursoController::class, 'edit'])->name('curso
 Route::put('cursos/{curso}', [CursoController::class, 'update'])->name('cursos.update');
 
 //Ruta encargada de eliminar un registro (No va a mostrar informacion sino a procesarla)
-Route::delete('cursos/{curso}', [CursoController::class, 'destroy'])->name('cursos.destroy');
+Route::delete('cursos/{curso}', [CursoController::class, 'destroy'])->name('cursos.destroy');*/
+
+
+
+Route::resource('cursos', CursoController::class);
+//Route::resource('asignaturas', CursoController::class)->parameters(['asignaturas' => 'curso'])->names('cursos');
+
+//Para mostrar solo contenido estatico
+Route::view('nosotros', 'nosotros')->name('nosotros');
+
+
 
 
 //Recibiendo más de una variable

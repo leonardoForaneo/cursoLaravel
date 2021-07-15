@@ -12,6 +12,11 @@ class Curso extends Model
     //protected $fillable = ['name', 'description', 'category'];
     protected $guarded = [];
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     //Asignamos el modelo a una tabla sin utilizar la convencion
     //protected $table = "users";
 }

@@ -7,8 +7,15 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="C:\xampp\htdocs\blog\resources\css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
+    <style>
+        .active{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
+@include('layouts.partials.navbar')
 
 <body>
     @yield('content')
